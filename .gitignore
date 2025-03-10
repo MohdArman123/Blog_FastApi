@@ -2,5 +2,4 @@ __pycache__
 blog-env
 .DS.store
 .vscode
-requirements.txt
 
