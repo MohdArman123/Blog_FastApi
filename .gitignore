@@ -1,3 +1,6 @@
 __pycache__
-venv
+blog-env
 .DS.store
+.vscode
+requirements.txt
+
