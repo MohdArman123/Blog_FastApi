@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from . import schemas, models
 from .database import engine
-from .routers import blog, user, authentication
+from .routers import blog, user, authentication, profile, tag
 
 app = FastAPI()
 
@@ -12,8 +12,10 @@ def home():
     return {"message": "Welcome to FastAPI Blog API!"}
 
 app.include_router(authentication.router)
+app.include_router(profile.router)
 app.include_router(blog.router)
 app.include_router(user.router)
+app.include_router(tag.router)
 
 # def get_db():
 #     db = database.SessionLocal()
