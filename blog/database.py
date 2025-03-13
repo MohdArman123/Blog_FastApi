@@ -9,6 +9,8 @@ load_dotenv()  # Load .env variables
 # SQLALCHEMY_DATABASE_URL =  "sqlite:///./blog.db"
 # SQLALCHEMY_DATABASE_URL = "postgresql://postgres:1234@localhost/blogdb"
 SQLALCHEMY_DATABASE_URL = os.getenv("DATABASE_URL")
+if not SQLALCHEMY_DATABASE_URL:
+    raise Exception("DATABASE_URL environment variable not set!")
 
 
 # engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args = {"check_same_thread": False})
