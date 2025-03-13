@@ -2,4 +2,4 @@ __pycache__
 blog-env
 .DS.store
 .vscode
-
+.env
